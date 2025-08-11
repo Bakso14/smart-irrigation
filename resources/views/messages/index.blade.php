@@ -26,12 +26,27 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        function formatToGMT7(utcString) {
+            const date = new Date(utcString);
+
+            return date.toLocaleString('id-ID', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+            }) + ' WIB';
+        }
+    </script>
+    <script>
         function loadData() {
             $.get('/api/messages', function(data) {
                 let html = '';
                 data.forEach(msg => {
                     html += `<tr>
-                        <td>${msg.created_at}</td>
+                        <td>${formatToGMT7(msg.created_at)}</td>
                         <td>${msg.topic}</td>
                         <td>${msg.message}</td>
                     </tr>`;
