@@ -69,9 +69,9 @@
                             <ul class="text-sm text-gray-700 space-y-1">
                                 <li><strong>Tegangan:</strong> ${node.tegangan} V</li>
                                 <li><strong>Arus:</strong> ${node.arus} mA</li>
-                                <li><strong>Sensor 1:</strong> ${node.sensor1}</li>
-                                <li><strong>Sensor 2:</strong> ${node.sensor2}</li>
-                                <li><strong>Sensor 3:</strong> ${node.sensor3}</li>
+                                <li><strong>Sensor Atas:</strong> ${node.sensor1}</li>
+                                <li><strong>Sensor Bawah:</strong> ${node.sensor2}</li>
+                                <li><strong>RSSI:</strong> ${node.sensor3}</li>
                                 <li class="text-xs text-gray-400 mt-2">Update: ${formatToGMT7(node.updated_at)}</li>
                             </ul>
                         </div>
